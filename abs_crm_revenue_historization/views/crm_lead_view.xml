@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="view_crm_lead_inherit" model="ir.ui.view">
+            <field name="name">crm.lead.form</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='lead']" position="after">
+		    <page string="Revenue Estimation History" groups="abs_crm_revenue_historization.group_estimated_revenue_menu_page_show">
+                        <field name="revenue_estimation_ids" readonly="1">
+                            <tree string="Revenue Estimation">
+                                <field name="planned_revenue"/>
+                                <field name="probability"/>
+                                <field name="planned_date"/>
+                            </tree>
+                        </field>
+		    </page>
+                </xpath>
+            </field>
+        </record>
+</odoo>

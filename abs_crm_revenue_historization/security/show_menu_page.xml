@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Create access group to Show Estimated Revenue Menu in Sales and Revenue estimation History Page in Opportunity. -->
+    <record id="group_estimated_revenue_menu_page_show" model="res.groups">
+        <field name="name">Show Estimated Revenue Historization</field>
+    </record>
+</odoo>
